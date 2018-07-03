@@ -1,0 +1,25 @@
+{
+  "name": "ppdb-scrapper",
+  "version": "0.1.0",
+  "description": "a simple script to grab data's from ppdb's api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caxvis/ppdb-scrapper.git"
+  },
+  "keywords": [
+    "ppdb"
+  ],
+  "author": "Andre Sion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caxvis/ppdb-scrapper/issues"
+  },
+  "homepage": "https://github.com/caxvis/ppdb-scrapper#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
