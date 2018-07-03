@@ -38,7 +38,7 @@ function getStudentData(num, id, namaSekolah) {
 }
 
 function writeData(schoolId=schoolId, message) {
-	fs.appendFile(`data/${schoolId}.csv`, message, function (err) {
+	fs.appendFile(`data/main.csv`, message, function (err) {
 	  if (err) {
 	    print(error)
 	  } else {
