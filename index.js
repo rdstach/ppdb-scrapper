@@ -11,15 +11,15 @@ function loopNumId(i) {
 			let lol = response.data.data[i][1],
 				nama = response.data.sekolah.nama;
 			// print(`${i + 1} : ${lol}`)
-			getStudentData(i, lol, nama)
+			getStudentData(i, lol, nama);
 		})
 		.catch(function(error) {
-			print(error)
+			print(error);
 		})
 }
 
 for (var i = 0; i < 5; i++) {
-	loopNumId(i)
+	loopNumId(i);
 }
 
 function getStudentData(num, id, namaSekolah) {
@@ -29,20 +29,20 @@ function getStudentData(num, id, namaSekolah) {
 			let newStr = raw.split(',');
 
 			// print(num + ',' + response.data[0][3][2][3] + ',' + newStr[0] + ',' +  namaSekolah + ',' + response.data[2][3][4][3][0] + ',' + response.data[0][3][4][3])
-			let message = `\n${num+1},${response.data[0][3][2][3]},${newStr[0]},${namaSekolah},${response.data[2][3][4][3][0]},${response.data[0][3][4][3]}`
-			writeData(schoolId, message)
+			let message = `\n${num+1},${response.data[0][3][2][3]},${newStr[0]},${namaSekolah},${response.data[2][3][4][3][0]},${response.data[0][3][4][3]}`;
+			writeData(schoolId, message);
 		})
 		.catch(function (error) {
-			print(error)
+			print(error);
 		})
 }
 
 function writeData(schoolId=schoolId, message) {
 	fs.appendFile(`data/main.csv`, message, function (err) {
 	  if (err) {
-	    print(error)
+	    print(error);
 	  } else {
-	    print(`${schoolId} has been successly written.`)
+	    print(`${schoolId} has been successly written.`);
 	  }
 	})
 }
